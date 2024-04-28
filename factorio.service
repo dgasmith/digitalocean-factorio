@@ -1,0 +1,13 @@
+[Unit]
+Description=Factorio service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/env /opt/factorio/start.sh
+
+[Install]
+WantedBy=multi-user.target
